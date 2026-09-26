@@ -1,0 +1,31 @@
+# Created with komac v2.16.0
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+
+PackageIdentifier: ElyPrismLauncher.ElyPrismLauncher.MinGW
+PackageVersion: 11.1.0
+InstallerType: zip
+InstallModes:
+- interactive
+- silent
+- silentWithProgress
+UpgradeBehavior: install
+ReleaseDate: 2026-09-04
+Installers:
+- Architecture: neutral
+  NestedInstallerType: portable
+  NestedInstallerFiles:
+  - RelativeFilePath: elyprismlauncher.exe
+  InstallerUrl: https://github.com/ElyPrismLauncher/Launcher/releases/download/11.1.0/PineconeMC-Windows-MinGW-w64-Portable-11.1.0.zip
+  InstallerSha256: F519C4504209943BE560C49F2091FAC20B6393CF6EDA20DD95D082FFD417C652
+- InstallerLocale: en-US
+  Architecture: neutral
+  Scope: user
+  InstallerUrl: https://github.com/ElyPrismLauncher/Launcher/releases/download/11.1.0/PineconeMC-Windows-MinGW-w64-Portable-11.1.0.zip
+  InstallerSha256: F519C4504209943BE560C49F2091FAC20B6393CF6EDA20DD95D082FFD417C652
+  ProductCode: ElyPrismLauncher
+  AppsAndFeaturesEntries:
+  - ProductCode: ElyPrismLauncher
+  InstallationMetadata:
+    DefaultInstallLocation: '%LocalAppData%\Programs\ElyPrismLauncher'
+ManifestType: installer
+ManifestVersion: 1.12.0
